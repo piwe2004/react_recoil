@@ -7,12 +7,11 @@ const TodoListFilter = () => {
     const [filter, setFilter] = useRecoilState(todoListFilterState)
     const updateFilter = ({target:{value}}) => {
         setFilter(value);
-        console.log(value)
     }
 
     return (
         <div>
-            FilterS:
+            Filter:
             <select value={filter} onChange={updateFilter}>
                 <option value="Show All">All</option>
                 <option value="Show Completed">Completed</option>
